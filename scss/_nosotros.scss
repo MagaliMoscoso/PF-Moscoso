@@ -1,0 +1,36 @@
+/* Nosotros */
+
+@mixin flexbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nosotros h3 {
+    color: rgb(61, 9, 9);
+  }
+  
+  .contenedornosotros, .contenedorTablas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .tarjeta {
+    @include flexbox;
+    background-color: $color-texto-verde;
+    border: 1px solid rgb(57, 68, 57);
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  
+    img {
+      max-width: 100%;
+    }
+  
+    p {
+      margin: 10px 0;
+    }
+  }
+  

@@ -1,0 +1,62 @@
+/* Encabezado */
+
+@mixin flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.encabezado {
+    @include flex;
+    height: 100px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  
+    h1 {
+      text-transform: uppercase;
+      transition: transform 0.3s ease;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px $color-texto-rojo;
+      font-size: 2.5rem;
+  
+      &:hover {
+        cursor: pointer;
+        transform: translateX(5px);
+      }
+    }
+  }
+  
+  .rojo {
+    color: $color-texto-rojo;
+  }
+  
+  .boton {
+    background-color: $color-texto-rojo;
+    color: #572525;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  
+    &:hover {
+      background-color: $color-boton-hover;
+      color: $color-f;
+      cursor: pointer;
+    }
+  }
+  
+  .encabezado li {
+    list-style-type: none;
+    display: inline-block;
+  
+    a {
+      text-decoration: none;
+      color: black;
+      margin: 10px;
+      font-size: 1.5rem;
+  
+      &:hover {
+        color: $color-texto-rojo;
+      }
+    }
+  }
+  

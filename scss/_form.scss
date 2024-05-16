@@ -1,0 +1,47 @@
+/* Contacto */
+
+@mixin input-area {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $color-c;
+    border-radius: 5px;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+        @include input-area;
+    }
+
+    textarea {
+        @include input-area;
+        height: 150px;
+    }
+
+    input {
+
+        &[type="submit"],
+        &[type="reset"] {
+            background-color: #238636;
+            color: $color-texto-footer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        &[type="submit"]:hover,
+        &[type="reset"]:hover {
+            background-color: #165727;
+        }
+    }
+}
